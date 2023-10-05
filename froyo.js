@@ -32,19 +32,20 @@ const numIceCream = flavors.length; //this will give us the user input in an arr
 console.log(flavors);
 console.log("You have inputed a total of " + numIceCream + " ice cream flavors");
 
-const count = {}
 
-for( let i=0; i<flavors.length; i++) {
+let count = 1;
+
+for( let i=0; i<flavors.length; i++) { //this will count any duplicate orders the user has inputed
   for(let j=i+1; j<flavors.length; j++){
     if(flavors[i] == flavors[j]){
       count++
     }
+    else{
+      const valFlavor = `${count}${flavors[i]}`; //this is only showing how any duplicate values are in the array rather than showing the actual numbers of flavors *still need to work on it
+      
+      count = 1                                   
+    }
   }
 }
 
-console.log(count);
-
-const objFlavors = {
-
-}
-
+console.log(count); 
